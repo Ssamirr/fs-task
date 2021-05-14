@@ -230,12 +230,16 @@ document.querySelector('.zoom-out').addEventListener('click', function () {
     zoom_size = zoom_size - 5;
     document.querySelector('.zoom-size').querySelector('span').innerText = zoom_size + '%';
     document.querySelector('.all-categories').style.transform = 'scale' + '(' + zoom_size + '%)';
+    document.querySelector('.all-categories').style.webkitTransform = 'scale' + '(' + zoom_size + '%)';
+    document.querySelector('.all-categories').style.msTransform = 'scale' + '(' + zoom_size + '%)';
 })
 
 document.querySelector('.zoom-in').addEventListener('click', function () {
     zoom_size = zoom_size + 5;
     document.querySelector('.zoom-size').querySelector('span').innerText = zoom_size + '%';
     document.querySelector('.all-categories').style.transform = 'scale' + '(' + zoom_size + '%)';
+    document.querySelector('.all-categories').style.webkitTransform = 'scale' + '(' + zoom_size + '%)';
+    document.querySelector('.all-categories').style.msTransform = 'scale' + '(' + zoom_size + '%)';
 })
 
 document.querySelector('.zoom-size-inner').querySelectorAll('li').forEach(function (e) {
@@ -243,6 +247,8 @@ document.querySelector('.zoom-size-inner').querySelectorAll('li').forEach(functi
         zoom_size = parseInt(e.innerText);
         document.querySelector('.zoom-size').querySelector('span').innerText = zoom_size + '%';
         document.querySelector('.all-categories').style.transform = 'scale' + '(' + zoom_size + '%)';
+        document.querySelector('.all-categories').style.webkitTransform = 'scale' + '(' + zoom_size + '%)';
+        document.querySelector('.all-categories').style.msTransform = 'scale' + '(' + zoom_size + '%)';
     })
 })
 
